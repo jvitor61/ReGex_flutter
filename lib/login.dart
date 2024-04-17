@@ -75,7 +75,7 @@ class _LoginState extends State<Login>{
             const SizedBox(
               height: 20,
             ),
-            inputForm ("Password", _controller2),
+            inputForm ("Senha", _controller2),
             const SizedBox(
               height: 10,
             ),
@@ -135,21 +135,21 @@ return Column(
     Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-            border: title =="Email"? Border.all(
-            width: 0.5, 
+            border: title =="CPF"? Border.all(
+            width: 4.5, 
             color: controller.text.isEmpty
           ? Colors.grey 
           : isEmailValid
               ?Colors.green
               :Colors.red)
-            : Border.all(width: 8.5, color: Colors.grey),
+            : Border.all(width: 4.5, color: Colors.grey),
       ),
       child: Padding(padding: const EdgeInsets.only(left: 10.0),
       child: TextField(
         controller: controller,
         decoration: const InputDecoration(border: InputBorder.none),
         onChanged: (value) {
-          if (title == "Email"){
+          if (title == "CPF"){
             if(value.isEmpty){
               setState((){
                 isEmailValid = true;
